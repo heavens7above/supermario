@@ -27,3 +27,4 @@ A simple Super Mario-style platformer game created with Python and Pygame.
 - Basic physics (gravity and jumping)
 - Sound effects
 - Simple platformer mechanics # supermario2
+# supermario2
