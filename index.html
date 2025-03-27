@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Simple Mario Game</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #333;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        #canvas {
+            border: 2px solid #666;
+            background-color: #000;
+        }
+        .controls {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .controls p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <div class="controls">
+        <p>Controls:</p>
+        <p>Left Arrow: Move left</p>
+        <p>Right Arrow: Move right</p>
+        <p>Space: Jump</p>
+        <p>ESC: Quit game</p>
+    </div>
+    <script type="module">
+        import { loadPyodide } from "https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.mjs";
+        async function main() {
+            let pyodide = await loadPyodide();
+            await pyodide.loadPackage("pygame");
+            await pyodide.runPythonAsync(`
+                import pygame
+                import sys
+                import asyncio
+                from main import main
+                asyncio.run(main())
+            `);
+        }
+        main();
+    </script>
+</body>
+</html> 
