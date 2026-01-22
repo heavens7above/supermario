@@ -35,6 +35,6 @@ Run tests:
 pytest
 ```
 
-## License
+
 
 PEACE OUT
