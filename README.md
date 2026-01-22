@@ -1,30 +1,40 @@
-# Simple Mario Game
+# Super Mario Clone
 
-A simple Super Mario-style platformer game created with Python and Pygame.
+A simple Super Mario clone built with Python and Pygame.
 
-## Setup Instructions
+## Structure
 
-1. Make sure you have Python 3.8+ installed
-2. Install the required dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
-3. Run the game:
-   ```
-   python main.py
-   ```
+- `src/supermario`: Source code
+- `assets`: Game assets (sounds, images)
+- `web`: Web version (Pyodide)
+- `scripts`: Utility scripts
 
-## Controls
+## Installation
 
-- Left Arrow: Move left
-- Right Arrow: Move right
-- Space: Jump
-- ESC: Quit game
+```bash
+pip install -e .
+```
 
-## Features
+## Running the Game
 
-- Smooth player movement
-- Basic physics (gravity and jumping)
-- Sound effects
-- Simple platformer mechanics # supermario2
-# supermario2
+```bash
+python -m supermario.main
+```
+
+## Development
+
+Install dev dependencies:
+
+```bash
+pip install -e ".[dev]"
+```
+
+Run tests:
+
+```bash
+pytest
+```
+
+## License
+
+MIT
