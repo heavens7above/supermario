@@ -37,4 +37,4 @@ pytest
 
 ## License
 
-MIT
+PEACE OUT
